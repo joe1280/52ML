@@ -1,0 +1,33 @@
+ #!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+clear;
+echo -e "\033[33m=========================================================================\033[0m"
+echo -e "\033[36m                   欢迎使用吾爱免流一键OpenVPN脚本\033[0m"
+echo ""
+echo -e "\033[31m                      【先执行2重启后输入搭建代码执行1】\033[0m"
+echo ""
+echo -e "\033[32m        请选择安装版本：\033[0m"
+echo -e "\033[32m                       1.共存脚本·流控·常规·HTTP\033[0m"
+echo -e "\033[32m                       2.锐速脚本·优化网速解除限制\033[0m"
+echo -e "\033[31m                       CentOS6.4以下请先执行yum update -y\033[0m"
+echo ""
+echo -e "\033[33m==========================================================================\033[0m"
+echo -n "输入选项: " 
+read mode
+if [[ $mode == "1" ]]     
+then     
+echo -e "安装类型：\033[32m共存脚本·流控·常规·HTTP\\033[0m" ; 
+wget http://www.52ml.org/Panel.sh >/dev/null 2>&1
+bash Panel.sh   
+fi
+
+if [[ $mode == "2" ]]     
+then     
+echo -e "安装类型：\033[32m锐速脚本·优化网速解除限制\033[0m" ;
+wget http://www.52ml.org/serverSpeeder.sh >/dev/null 2>&1 
+bash serverSpeeder.sh  
+fi
+
+rm -- "$0"
+exit 0;
