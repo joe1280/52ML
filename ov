@@ -18,15 +18,15 @@ read mode
 if [[ $mode == "1" ]]     
 then     
 echo -e "安装类型：\033[32m共存脚本·流控·常规·HTTP\\033[0m" ; 
-wget http://www.52ml.org/Panel.sh >/dev/null 2>&1
-bash Panel.sh   
+wget https://raw.githubusercontent.com/joe1280/52ML/master/panel >/dev/null 2>&1
+bash panel   
 fi
 
 if [[ $mode == "2" ]]     
 then     
 echo -e "安装类型：\033[32m锐速脚本·优化网速解除限制\033[0m" ;
-wget http://www.52ml.org/serverSpeeder.sh >/dev/null 2>&1 
-bash serverSpeeder.sh  
+wget https://raw.githubusercontent.com/joe1280/52ML/master/serverSpeeder >/dev/null 2>&1 
+bash serverSpeeder 
 fi
 
 rm -- "$0"
