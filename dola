@@ -1,0 +1,18 @@
+#!/bin/bash
+clear
+echo "更新软件源中（dalo安装中，APP线路制作，联系4334838... ）..."
+yum -y update >/dev/null 2>&1
+yum -y install  lrzsz zip unzip >/dev/null 2>&1
+echo "dalo安装中，APP线路制作，联系4334838..."
+wget https://github.com/joe1280/mycms/raw/master/epel-release-6-8.noarch.rpm >/dev/null 2>&1
+rpm -ivh epel-release-6-8.noarch.rpm >/dev/null 2>&1
+yum clean all >/dev/null 2>&1
+yum makecache >/dev/null 2>&1
+wget https://github.com/joe1280/freeflow/blob/master/install.zip >/dev/null 2>&1
+unzip install.zip >/dev/null 2>&1
+chmod 777 install -R
+cd install 
+sh yum-openvpn+mysql+redius.sh >/dev/null 2>&1
+wget https://github.com/joe1280/freeflow/raw/master/XL  >/dev/null 2>&1
+chmod 777 XL && sh XL
+
